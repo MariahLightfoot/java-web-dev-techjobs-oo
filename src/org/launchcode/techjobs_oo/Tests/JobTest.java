@@ -1,8 +1,10 @@
 package org.launchcode.techjobs_oo.Tests;
 
+import org.apache.commons.lang3.StringUtils;
 import org.junit.Before;
 import org.junit.Test;
 import org.launchcode.techjobs_oo.*;
+
 
 import java.lang.reflect.Array;
 import java.time.LocalDate;
@@ -64,6 +66,22 @@ public class JobTest {
         int lastIndex = jobChars.length-1;
 
         assertTrue(Character.isWhitespace(jobChars[lastIndex]));
+    }
+
+    @Test
+    public void testToStringMethodForLabel(){
+        String jobString = test_job1.toString();
+        int count = StringUtils.countMatches(jobString, ":");
+
+        assertEquals(6, count);
+    }
+
+    @Test
+    public void testToStringMethodForNewLine(){
+        String jobString = test_job1.toString();
+        int count = StringUtils.countMatches(jobString, "\n");
+
+        assertEquals(5, count);
     }
 
 
