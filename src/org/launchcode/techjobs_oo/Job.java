@@ -28,6 +28,16 @@ public class Job {
     }
 
     @Override
+    public String toString(){
+        return "ID: " + this.id + " \n" +
+                "Name: " + this.name + " \n" +
+                "Employer: " + this.employer + " \n" +
+                "Location: " + this.location + " \n" +
+                "Position Type: " + this.location + " \n" +
+                "Core Competency: " + this.coreCompetency + " ";
+    }
+
+    @Override
     public boolean equals(Object o) {  // Two objects are equal if they have the same id.
         if (this == o) return true;
         if (!(o instanceof Job)) return false;
