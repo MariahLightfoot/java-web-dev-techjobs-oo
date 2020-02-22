@@ -36,11 +36,15 @@ public class JobTest {
         assertEquals("Desert", productTester.getLocation().getValue());
         assertEquals("Quality control", productTester.getPositionType().getValue());
         assertEquals("Persistence", productTester.getCoreCompetency().getValue());
-
-        assertNotNull(productTester.getEmployer());
-        assertNotNull(productTester.getLocation());
-        assertNotNull(productTester.getPositionType());
-        assertNotNull(productTester.getCoreCompetency());
-
     }
+
+    @Test
+    public void testJobsForEquality(){
+        Job designer = new Job("Designer", new Employer("Atomic Dust"), new Location("St. Louis"), new PositionType("Creative"), new CoreCompetency("Good eye"));
+        Job designer2 = new Job("Designer", new Employer("Atomic Dust"), new Location("St. Louis"), new PositionType("Creative"), new CoreCompetency("Good eye"));
+        assertNotEquals(designer.getId(), designer2.getId());
+    }
+
+
+
 }
