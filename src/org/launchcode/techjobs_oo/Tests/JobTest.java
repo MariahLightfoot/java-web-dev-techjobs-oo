@@ -84,6 +84,14 @@ public class JobTest {
         assertEquals(5, count);
     }
 
+    @Test
+    public void testToStringDataNotAvailable(){
+        Job designer3 = new Job();
+        String jobString = designer3.toString();
+
+        assertTrue(jobString.contains("Data not available"));
+    }
+
 
 
 

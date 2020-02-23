@@ -29,12 +29,51 @@ public class Job {
 
     @Override
     public String toString(){
-        return "ID: " + this.id + " \n" +
-                "Name: " + this.name + " \n" +
-                "Employer: " + this.employer + " \n" +
-                "Location: " + this.location + " \n" +
-                "Position Type: " + this.location + " \n" +
-                "Core Competency: " + this.coreCompetency + " ";
+
+        if(this.name == null){
+            return "ID: " + this.id + " \n" +
+                    "Name: Data not available \n" +
+                    "Employer: " + this.employer + " \n" +
+                    "Location: " + this.location + " \n" +
+                    "Position Type: " + this.location + " \n" +
+                    "Core Competency: " + this.coreCompetency + " ";
+        } else if(this.employer == null){
+            return "ID: " + this.id + " \n" +
+                    "Name: " + this.name + " \n" +
+                    "Employer: Data not available \n" +
+                    "Location: " + this.location + " \n" +
+                    "Position Type: " + this.location + " \n" +
+                    "Core Competency: " + this.coreCompetency + " ";
+        } else if(this.location == null){
+            return "ID: " + this.id + " \n" +
+                    "Name: " + this.name + " \n" +
+                    "Employer: " + this.employer + " \n" +
+                    "Location: Data not available \n" +
+                    "Position Type: " + this.location + " \n" +
+                    "Core Competency: " + this.coreCompetency + " ";
+        } else if(this.positionType == null){
+            return "ID: " + this.id + " \n" +
+                    "Name: " + this.name + " \n" +
+                    "Employer: " + this.employer + " \n" +
+                    "Location: " + this.location + " \n" +
+                    "Position Type: Data not available \n" +
+                    "Core Competency: " + this.coreCompetency + " ";
+        } else if(this.coreCompetency == null){
+            return "ID: " + this.id + " \n" +
+                    "Name: " + this.name + " \n" +
+                    "Employer: " + this.employer + " \n" +
+                    "Location: " + this.location + " \n" +
+                    "Position Type: " + this.location + " \n" +
+                    "Core Competency: Data not available ";
+        } else{
+            return "ID: " + this.id + " \n" +
+                    "Name: " + this.name + " \n" +
+                    "Employer: " + this.employer + " \n" +
+                    "Location: " + this.location + " \n" +
+                    "Position Type: " + this.location + " \n" +
+                    "Core Competency: " + this.coreCompetency + " ";
+        }
+
     }
 
     @Override
