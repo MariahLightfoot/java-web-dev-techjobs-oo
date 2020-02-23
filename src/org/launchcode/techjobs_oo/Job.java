@@ -30,49 +30,47 @@ public class Job {
     @Override
     public String toString(){
 
-        if(this.name == null && this.employer == null && this.location == null && this.positionType == null && this.coreCompetency == null){
-            return "OOPS! This job does not seem to exist.";
-        } else if(this.name == null){
+        if(this.name.isEmpty()){
             return "ID: " + this.id + " \n" +
                     "Name: Data not available \n" +
                     "Employer: " + this.employer + " \n" +
                     "Location: " + this.location + " \n" +
-                    "Position Type: " + this.location + " \n" +
+                    "Position Type: " + this.positionType + " \n" +
                     "Core Competency: " + this.coreCompetency + " ";
-        } else if(this.employer == null){
+        } else if(this.employer.getValue().isEmpty()){
             return "ID: " + this.id + " \n" +
                     "Name: " + this.name + " \n" +
                     "Employer: Data not available \n" +
                     "Location: " + this.location + " \n" +
-                    "Position Type: " + this.location + " \n" +
+                    "Position Type: " + this.positionType + " \n" +
                     "Core Competency: " + this.coreCompetency + " ";
-        } else if(this.location == null){
+        } else if(this.location.getValue().isEmpty()){
             return "ID: " + this.id + " \n" +
                     "Name: " + this.name + " \n" +
                     "Employer: " + this.employer + " \n" +
                     "Location: Data not available \n" +
-                    "Position Type: " + this.location + " \n" +
+                    "Position Type: " + this.positionType + " \n" +
                     "Core Competency: " + this.coreCompetency + " ";
-        } else if(this.positionType == null){
+        } else if(this.positionType.getValue().isEmpty()){
             return "ID: " + this.id + " \n" +
                     "Name: " + this.name + " \n" +
                     "Employer: " + this.employer + " \n" +
                     "Location: " + this.location + " \n" +
                     "Position Type: Data not available \n" +
                     "Core Competency: " + this.coreCompetency + " ";
-        } else if(this.coreCompetency == null){
+        } else if(this.coreCompetency.getValue().isEmpty()){
             return "ID: " + this.id + " \n" +
                     "Name: " + this.name + " \n" +
                     "Employer: " + this.employer + " \n" +
                     "Location: " + this.location + " \n" +
-                    "Position Type: " + this.location + " \n" +
+                    "Position Type: " + this.positionType + " \n" +
                     "Core Competency: Data not available ";
-        } else{
+        } else {
             return "ID: " + this.id + " \n" +
                     "Name: " + this.name + " \n" +
                     "Employer: " + this.employer + " \n" +
                     "Location: " + this.location + " \n" +
-                    "Position Type: " + this.location + " \n" +
+                    "Position Type: " + this.positionType + " \n" +
                     "Core Competency: " + this.coreCompetency + " ";
         }
 

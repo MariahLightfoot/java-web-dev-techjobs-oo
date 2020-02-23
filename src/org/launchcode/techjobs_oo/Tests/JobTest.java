@@ -81,17 +81,10 @@ public class JobTest {
 
     @Test
     public void testToStringDataNotAvailable(){
-        Job designer3 = new Job(null, new Employer("Atomic Dust"), new Location("St. Louis"), new PositionType("Creative"), new CoreCompetency("Good eye"));
+        Job designer3 = new Job("", new Employer("Atomic Dust"), new Location("St. Louis"), new PositionType("Creative"), new CoreCompetency("Good eye"));
         String jobString = designer3.toString();
 
-        assertTrue(jobString.contains("Data not available"));
-    }
-
-    @Test
-    public void testToStringJobDoesntExistsIfNoFieldsButId(){
-        Job designer4 = new Job();
-
-        assertEquals(designer4.toString(), "OOPS! This job does not seem to exist.");
+        assertTrue(jobString.contains("Name: Data not available "));
     }
 
 }
