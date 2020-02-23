@@ -17,8 +17,6 @@ public class Location {
         this.value = value;
     }
 
-    // Custom toString, equals, and hashCode methods:
-
     @Override
     public String toString() {
         return value;
@@ -36,8 +34,6 @@ public class Location {
     public int hashCode() {
         return Objects.hash(getId());
     }
-
-    // Getters and Setters:
 
     public int getId() {
         return id;

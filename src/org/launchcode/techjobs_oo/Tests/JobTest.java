@@ -5,11 +5,6 @@ import org.junit.Before;
 import org.junit.Test;
 import org.launchcode.techjobs_oo.*;
 
-
-import java.lang.reflect.Array;
-import java.time.LocalDate;
-import java.util.ArrayList;
-
 import static org.junit.Assert.*;
 
 public class JobTest {
@@ -98,8 +93,5 @@ public class JobTest {
 
         assertEquals(designer4.toString(), "OOPS! This job does not seem to exist.");
     }
-
-
-
 
 }

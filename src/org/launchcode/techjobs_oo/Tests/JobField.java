@@ -1,18 +1,19 @@
-package org.launchcode.techjobs_oo;
+package org.launchcode.techjobs_oo.Tests;
 
+import org.launchcode.techjobs_oo.Employer;
 import java.util.Objects;
 
-public class Employer {
+public abstract class JobField {
     private int id;
     private static int nextId = 1;
     private String value;
 
-    public Employer() {
+    public JobField() {
         id = nextId;
         nextId++;
     }
 
-    public Employer(String value) {
+    public JobField(String value) {
         this();
         this.value = value;
     }
@@ -47,3 +48,4 @@ public class Employer {
         this.value = value;
     }
 }
+
