@@ -30,7 +30,9 @@ public class Job {
     @Override
     public String toString(){
 
-        if(this.name == null){
+        if(this.name == null && this.employer == null && this.location == null && this.positionType == null && this.coreCompetency == null){
+            return "OOPS! This job does not seem to exist.";
+        } else if(this.name == null){
             return "ID: " + this.id + " \n" +
                     "Name: Data not available \n" +
                     "Employer: " + this.employer + " \n" +
