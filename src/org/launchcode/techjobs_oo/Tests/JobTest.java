@@ -4,7 +4,6 @@ import org.apache.commons.lang3.StringUtils;
 import org.junit.Before;
 import org.junit.Test;
 import org.launchcode.techjobs_oo.*;
-
 import static org.junit.Assert.*;
 
 public class JobTest {
@@ -81,10 +80,9 @@ public class JobTest {
 
     @Test
     public void testToStringDataNotAvailable(){
-        Job designer3 = new Job("", new Employer("Atomic Dust"), new Location("St. Louis"), new PositionType("Creative"), new CoreCompetency("Good eye"));
-        String jobString = designer3.toString();
+        Job designer3 = new Job("Designer", new Employer(""), new Location("St. Louis"), new PositionType("Creative"), new CoreCompetency("Good eye"));
 
-        assertTrue(jobString.contains("Name: Data not available "));
+        assertEquals("Data not available", designer3.getEmployer().toString());
     }
 
 }

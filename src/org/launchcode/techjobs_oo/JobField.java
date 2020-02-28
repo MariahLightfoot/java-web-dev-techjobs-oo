@@ -1,6 +1,5 @@
-package org.launchcode.techjobs_oo.Tests;
+package org.launchcode.techjobs_oo;
 
-import org.launchcode.techjobs_oo.Employer;
 import java.util.Objects;
 
 public abstract class JobField {
@@ -20,15 +19,20 @@ public abstract class JobField {
 
     @Override
     public String toString() {
-        return value;
+        if(this.value.equals("")){
+            return "Data not available";
+        } else {
+            return this.value;
+        }
+
     }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof Employer)) return false;
-        Employer employer = (Employer) o;
-        return getId() == employer.getId();
+        if (!(o instanceof JobField)) return false;
+        JobField jobField = (JobField) o;
+        return getId() == jobField.getId();
     }
 
     @Override
