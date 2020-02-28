@@ -10,6 +10,7 @@ public abstract class JobField {
     public JobField() {
         id = nextId;
         nextId++;
+        this.value = "Data not available";
     }
 
     public JobField(String value) {
@@ -19,12 +20,7 @@ public abstract class JobField {
 
     @Override
     public String toString() {
-        if(this.value.equals("")){
-            return "Data not available";
-        } else {
-            return this.value;
-        }
-
+        return this.value;
     }
 
     @Override

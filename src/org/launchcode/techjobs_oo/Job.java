@@ -16,6 +16,7 @@ public class Job {
     public Job() {
         id = nextId;
         nextId++;
+        this.name = "Data not available";
     }
 
     public Job(String name, Employer employer, Location location, PositionType positionType, CoreCompetency coreCompetency) {

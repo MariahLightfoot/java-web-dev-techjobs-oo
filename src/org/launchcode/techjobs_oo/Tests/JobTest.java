@@ -80,9 +80,9 @@ public class JobTest {
 
     @Test
     public void testToStringDataNotAvailable(){
-        Job designer3 = new Job("Designer", new Employer(""), new Location("St. Louis"), new PositionType("Creative"), new CoreCompetency("Good eye"));
+        Job designer3 = new Job("Designer", new Employer(), new Location("St. Louis"), new PositionType("Creative"), new CoreCompetency("Good eye"));
 
-        assertEquals("Data not available", designer3.getEmployer().toString());
+        assertEquals("Data not available", designer3.getEmployer().getValue());
     }
 
 }
