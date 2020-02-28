@@ -19,6 +19,14 @@ public class Job {
         this.name = "Data not available";
     }
 
+    public Job(Employer employer, Location location, PositionType positionType, CoreCompetency coreCompetency) {
+        this();
+        this.employer = employer;
+        this.location = location;
+        this.positionType = positionType;
+        this.coreCompetency = coreCompetency;
+    }
+
     public Job(String name, Employer employer, Location location, PositionType positionType, CoreCompetency coreCompetency) {
         this();
         this.name = name;
