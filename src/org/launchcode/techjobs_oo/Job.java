@@ -34,6 +34,10 @@ public class Job {
         this.location = location;
         this.positionType = positionType;
         this.coreCompetency = coreCompetency;
+
+        if(this.name.equals("")){
+            this.name = "Data not available";
+        }
     }
 
     @Override
