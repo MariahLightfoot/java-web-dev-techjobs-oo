@@ -10,21 +10,16 @@ public abstract class JobField {
     public JobField() {
         id = nextId;
         nextId++;
-        this.value = "Data not available";
     }
 
     public JobField(String value) {
         this();
         this.value = value;
-
-        if(this.value.equals("")){
-            this.value = "Data not available";
-        }
     }
 
     @Override
     public String toString() {
-        return this.value;
+        return this.getValue();
     }
 
     @Override
@@ -45,7 +40,11 @@ public abstract class JobField {
     }
 
     public String getValue() {
-        return value;
+        if(this.value.equals("")){
+            return "Data not available";
+        }
+
+        return this.value;
     }
 
     public void setValue(String value) {

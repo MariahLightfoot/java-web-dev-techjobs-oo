@@ -16,15 +16,6 @@ public class Job {
     public Job() {
         id = nextId;
         nextId++;
-        this.name = "Data not available";
-    }
-
-    public Job(Employer employer, Location location, PositionType positionType, CoreCompetency coreCompetency) {
-        this();
-        this.employer = employer;
-        this.location = location;
-        this.positionType = positionType;
-        this.coreCompetency = coreCompetency;
     }
 
     public Job(String name, Employer employer, Location location, PositionType positionType, CoreCompetency coreCompetency) {
@@ -34,10 +25,6 @@ public class Job {
         this.location = location;
         this.positionType = positionType;
         this.coreCompetency = coreCompetency;
-
-        if(this.name.equals("")){
-            this.name = "Data not available";
-        }
     }
 
     @Override
@@ -64,7 +51,10 @@ public class Job {
     }
 
     public String getName() {
-        return name;
+        if(this.name.equals("")){
+            return "Data not available";
+        }
+        return this.name;
     }
 
     public void setName(String name) {

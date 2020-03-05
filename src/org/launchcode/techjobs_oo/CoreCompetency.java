@@ -6,8 +6,5 @@ public class CoreCompetency extends JobField {
         super(value);
     }
 
-    public CoreCompetency() {
-        this.getValue();
-    }
 
 }

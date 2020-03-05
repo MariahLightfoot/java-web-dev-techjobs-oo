@@ -6,8 +6,5 @@ public class Location extends JobField{
         super(value);
     }
 
-    public Location() {
-        this.getValue();
-    }
 }
 
